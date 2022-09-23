@@ -6,3 +6,6 @@
 
 # Result files
 */Results.*
+
+# slurm outputs
+*.out

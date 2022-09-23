@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
+
 # Import builtin Python modules
 import sys,os.path
+print('hello!')
 
 # Import ERT python modules
 from Python.ert_core  import ert_core
