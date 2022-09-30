@@ -115,6 +115,6 @@ set colorbox default
 set loadpath 
 set fit noerrorvariables
 set terminal postscript solid color
-set output "ERT_GRAPH.ps"
+set output "ERT_GRAPH.png"
 plot "ERT_MAX_DATA" using 1:10 with linespoints pt 7 ps 0.4
 #EOF

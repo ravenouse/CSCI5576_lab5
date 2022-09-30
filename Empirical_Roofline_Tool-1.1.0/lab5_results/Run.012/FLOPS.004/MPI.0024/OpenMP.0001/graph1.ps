@@ -1,0 +1,3178 @@
+%!PS-Adobe-2.0
+%%Title: lab5_results/Run.012/FLOPS.004/MPI.0024/OpenMP.0001/graph1.ps
+%%Creator: gnuplot 5.4 patchlevel 1
+%%CreationDate: Fri Sep 30 10:03:59 2022
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 554 770
+%%Orientation: Landscape
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape true def
+/Level1 false def
+/Level3 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 554 50 lineto 554 770 lineto 50 770 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 5.2 (Dec 2017)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Classic Line colors (version 5.0)
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
+/LTw {PL [] 1 setgray} def
+/LTb {PL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto closepath gsave fill grestore stroke} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+%
+/Metrics {ExtendTextBox Gswidth} def
+/Lwidth {currentpoint stroke M 0 vshift R Metrics} def
+/Rwidth {currentpoint stroke M dup stringwidth pop neg vshift R Metrics} def
+/Cwidth {currentpoint stroke M dup stringwidth pop -2 div vshift R Metrics} def
+/GLwidth {currentpoint stroke M 0 vshift R {ExtendTextBox} forall} def
+/GRwidth {currentpoint stroke M dup Gwidth vshift R {ExtendTextBox} forall} def
+/GCwidth {currentpoint stroke M dup Gwidth 2 div vshift R {ExtendTextBox} forall} def
+/GLwidth2 {0 Gwidth AddGlyphWidth} def
+/GRwidth2 {Gwidth -1 mul 0 AddGlyphWidth} def
+/GCwidth2 {Gwidth 2 div dup -1 mul AddGlyphWidth} def
+/AddGlyphWidth { dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+                 dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse } def
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {textshow} {Metrics pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get Gswidth pop -2 div
+     dup 0 R} {dup 6 get Gswidth pop -2 div 0 R 6 get
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (lab5_results/Run.012/FLOPS.004/MPI.0024/OpenMP.0001/graph1.ps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.4 patchlevel 1)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Fri Sep 30 10:03:59 2022)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt Sep 2016
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { dup type /stringtype eq
+    { Boxing { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if }
+    {} ifelse} def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+770 448 M
+6107 0 V
+stroke
+LTb
+LCb setrgbcolor
+770 448 M
+63 0 V
+6044 0 R
+-63 0 V
+stroke
+686 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1e+04)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+/vshift -46 def
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+770 1704 M
+6107 0 V
+stroke
+LTb
+LCb setrgbcolor
+770 1704 M
+31 0 V
+6076 0 R
+-31 0 V
+stroke
+LTa
+LCa setrgbcolor
+770 2438 M
+6107 0 V
+stroke
+LTb
+LCb setrgbcolor
+770 2438 M
+31 0 V
+6076 0 R
+-31 0 V
+stroke
+LTa
+LCa setrgbcolor
+770 2959 M
+6107 0 V
+stroke
+LTb
+LCb setrgbcolor
+770 2959 M
+31 0 V
+6076 0 R
+-31 0 V
+stroke
+LTa
+LCa setrgbcolor
+770 3363 M
+6107 0 V
+stroke
+LTb
+LCb setrgbcolor
+770 3363 M
+31 0 V
+6076 0 R
+-31 0 V
+stroke
+LTa
+LCa setrgbcolor
+770 3694 M
+6107 0 V
+stroke
+LTb
+LCb setrgbcolor
+770 3694 M
+31 0 V
+6076 0 R
+-31 0 V
+stroke
+LTa
+LCa setrgbcolor
+770 3973 M
+6107 0 V
+stroke
+LTb
+LCb setrgbcolor
+770 3973 M
+31 0 V
+6076 0 R
+-31 0 V
+stroke
+LTa
+LCa setrgbcolor
+770 4215 M
+6107 0 V
+stroke
+LTb
+LCb setrgbcolor
+770 4215 M
+31 0 V
+6076 0 R
+-31 0 V
+stroke
+LTa
+LCa setrgbcolor
+770 4428 M
+6107 0 V
+stroke
+LTb
+LCb setrgbcolor
+770 4428 M
+31 0 V
+6076 0 R
+-31 0 V
+stroke
+LTa
+LCa setrgbcolor
+770 4619 M
+6107 0 V
+stroke
+LTb
+LCb setrgbcolor
+770 4619 M
+63 0 V
+6044 0 R
+-63 0 V
+stroke
+686 4619 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1e+05)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+770 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+770 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+770 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1e+00)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+1048 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+1048 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+1210 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+1210 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+1325 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+1325 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+1415 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+1415 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+1488 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+1488 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+1549 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+1549 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+1603 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+1603 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+1650 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+1650 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+1692 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+1692 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+1692 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1e+01)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+1970 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+1970 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+2132 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+2132 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+2247 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+2247 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+2337 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+2337 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+2410 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+2410 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+2471 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+2471 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+2525 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+2525 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+2572 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+2572 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+2614 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+2614 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+2614 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1e+02)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+2892 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+2892 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+3054 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+3054 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+3169 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+3169 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+3259 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+3259 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+3332 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+3332 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+3394 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+3394 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+3447 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+3447 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+3494 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+3494 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+3536 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+3536 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+3536 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1e+03)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+3814 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+3814 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+3976 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+3976 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+4092 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+4092 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+4181 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+4181 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+4254 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+4254 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+4316 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+4316 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+4369 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+4369 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+4416 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+4416 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+4459 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+4459 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+4459 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1e+04)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+4736 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+4736 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+4899 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+4899 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+5014 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+5014 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+5103 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+5103 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+5176 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+5176 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+5238 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+5238 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+5291 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+5291 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+5338 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+5338 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+5381 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+5381 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+5381 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1e+05)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+5658 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+5658 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+5821 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+5821 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+5936 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+5936 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+6025 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+6025 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+6098 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+6098 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+6160 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+6160 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+6213 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+6213 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+6261 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+6261 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+6303 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+6303 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+6303 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1e+06)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTa
+LCa setrgbcolor
+6580 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+6580 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+6743 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+6743 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+LTa
+LCa setrgbcolor
+6858 448 M
+0 4171 V
+stroke
+LTb
+LCb setrgbcolor
+6858 448 M
+0 31 V
+0 4140 R
+0 -31 V
+stroke
+[0 100] 0 setdash
+LTw
+770 2534 M
+6107 0 V
+stroke
+LTB
+LCb setrgbcolor
+770 4619 N
+770 448 L
+6107 0 V
+0 4171 V
+-6107 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+133 2533 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (Seconds)]
+] -46.7 MCshow
+grestore
+/Helvetica findfont 140 scalefont setfont
+LTb
+LCb setrgbcolor
+LTb
+LCb setrgbcolor
+3823 98 M
+[ [(Helvetica) 140.0 0.0 true true 0 (Number Of Trials)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+LTb
+LCb setrgbcolor
+LTb
+LCb setrgbcolor
+% Begin plot #1
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+770 2374 M
+278 -196 V
+277 1249 V
+278 -64 V
+277 -73 V
+2158 2179 L
+278 734 V
+277 -358 V
+278 -375 V
+277 1221 V
+278 645 V
+278 -446 V
+277 -273 V
+4379 2179 L
+277 993 V
+278 191 V
+277 -645 V
+278 -221 V
+278 507 V
+277 286 V
+278 144 V
+277 319 V
+278 593 V
+770 2664 M
+278 -706 V
+277 1578 V
+278 -247 V
+277 -199 V
+278 -843 V
+278 1116 V
+277 -594 V
+278 -615 V
+277 936 V
+278 199 V
+278 -975 V
+277 937 V
+278 -696 V
+277 879 V
+4934 2314 L
+277 803 V
+278 173 V
+278 -85 V
+277 -201 V
+278 398 V
+277 518 V
+770 2178 M
+278 1 V
+277 -568 V
+278 1640 V
+277 -31 V
+278 -261 V
+278 -141 V
+277 0 V
+278 616 V
+277 -521 V
+278 -783 V
+278 1304 V
+277 167 V
+278 -936 V
+277 -502 V
+278 1010 V
+277 -193 V
+278 -801 V
+278 1290 V
+277 -218 V
+278 588 V
+770 2033 M
+278 1054 V
+277 -272 V
+278 233 V
+277 203 V
+278 112 V
+278 -151 V
+277 -965 V
+278 -636 V
+277 1752 V
+3546 2247 L
+278 1116 V
+277 -36 V
+278 -76 V
+277 -538 V
+278 105 V
+277 616 V
+278 -4 V
+278 -179 V
+277 -26 V
+278 407 V
+770 2818 M
+278 545 V
+277 -316 V
+278 1 V
+277 -869 V
+278 1255 V
+278 -344 V
+277 -713 V
+278 1057 V
+277 -187 V
+278 -692 V
+278 641 V
+4101 2179 L
+278 0 V
+277 1011 V
+278 244 V
+5211 2094 L
+278 820 V
+278 218 V
+277 302 V
+278 290 V
+770 3378 M
+1048 2179 L
+277 -145 V
+278 145 V
+277 589 V
+278 -589 V
+278 198 V
+277 1057 V
+278 -34 V
+277 -111 V
+278 -38 V
+3824 2248 L
+277 -69 V
+278 84 V
+277 -239 V
+278 1227 V
+277 183 V
+278 0 V
+5767 2179 L
+277 1324 V
+770 3212 M
+278 -711 V
+277 -322 V
+278 134 V
+277 1050 V
+278 -151 V
+278 223 V
+277 -1 V
+278 -24 V
+277 -159 V
+278 -27 V
+278 -12 V
+277 -35 V
+278 -998 V
+277 994 V
+278 78 V
+277 -827 V
+278 -245 V
+278 979 V
+277 378 V
+770 2376 M
+278 1 V
+277 874 V
+278 7 V
+277 -299 V
+278 -141 V
+278 616 V
+277 -21 V
+278 -162 V
+277 112 V
+278 -74 V
+278 145 V
+4101 2315 L
+278 454 V
+277 665 V
+4934 2179 L
+277 1075 V
+5489 2235 L
+278 12 V
+277 571 V
+770 2179 M
+278 259 V
+277 -259 V
+278 639 V
+277 -263 V
+278 -272 V
+278 382 V
+277 467 V
+278 -819 V
+277 819 V
+278 -953 V
+278 0 V
+277 0 V
+278 -568 V
+277 887 V
+278 924 V
+277 -290 V
+278 71 V
+278 -486 V
+277 675 V
+770 3089 M
+278 -424 V
+277 -486 V
+278 -303 V
+277 501 V
+278 755 V
+278 119 V
+277 0 V
+2991 1957 L
+277 1612 V
+278 -135 V
+3824 1793 L
+277 1775 V
+4379 2247 L
+277 1187 V
+278 -386 V
+277 279 V
+278 0 V
+278 -414 V
+277 338 V
+770 2351 M
+278 -172 V
+277 -376 V
+278 376 V
+277 1255 V
+278 -183 V
+278 76 V
+2713 1957 L
+278 861 V
+277 -153 V
+278 441 V
+278 -59 V
+277 -668 V
+278 948 V
+277 -323 V
+278 465 V
+277 -337 V
+278 -953 V
+278 1255 V
+770 3289 M
+1048 2247 L
+277 1322 V
+278 -206 V
+1880 2179 L
+278 359 V
+278 713 V
+277 -22 V
+278 134 V
+277 361 V
+3546 1877 L
+278 441 V
+277 1151 V
+278 -179 V
+4656 2179 L
+278 1072 V
+277 112 V
+278 -151 V
+278 77 V
+770 3090 M
+278 237 V
+277 305 V
+1603 2377 L
+277 340 V
+278 -404 V
+278 1255 V
+277 -396 V
+278 79 V
+277 76 V
+278 -237 V
+278 161 V
+277 112 V
+278 269 V
+277 -915 V
+278 -162 V
+277 837 V
+5489 2179 L
+278 589 V
+770 3469 M
+278 -287 V
+277 -364 V
+278 79 V
+277 -498 V
+278 -221 V
+278 869 V
+277 -868 V
+278 1422 V
+3268 2086 L
+278 579 V
+278 -288 V
+277 121 V
+278 506 V
+277 499 V
+278 -252 V
+277 -9 V
+278 121 V
+278 17 V
+770 3434 M
+278 -183 V
+1325 2179 L
+278 0 V
+277 639 V
+278 186 V
+278 359 V
+277 -325 V
+278 9 V
+277 422 V
+3546 2179 L
+278 526 V
+277 658 V
+278 71 V
+277 -205 V
+278 134 V
+277 71 V
+5489 1921 L
+278 1368 V
+770 2818 M
+278 -861 V
+277 811 V
+278 -734 V
+277 145 V
+278 -475 V
+278 1565 V
+2713 2179 L
+278 -387 V
+277 294 V
+278 291 V
+278 670 V
+277 314 V
+278 38 V
+4656 2179 L
+278 1422 V
+5211 2555 L
+278 696 V
+278 0 V
+770 2146 M
+278 -64 V
+277 922 V
+278 -566 V
+277 652 V
+278 -911 V
+278 1072 V
+277 -879 V
+278 637 V
+277 -830 V
+278 1220 V
+278 35 V
+277 -503 V
+278 265 V
+277 55 V
+4934 2198 L
+277 1208 V
+278 -234 V
+278 40 V
+770 3289 M
+278 -624 V
+277 294 V
+278 -141 V
+277 0 V
+278 433 V
+278 184 V
+277 -145 V
+278 37 V
+3268 2179 L
+278 0 V
+278 260 V
+277 1 V
+278 473 V
+277 -358 V
+278 263 V
+277 -100 V
+278 -1 V
+278 -11 V
+770 3693 M
+1048 2555 L
+277 56 V
+278 521 V
+277 157 V
+278 247 V
+278 -102 V
+277 -8 V
+278 -254 V
+277 172 V
+278 -905 V
+278 -735 V
+277 1730 V
+278 -431 V
+277 217 V
+278 -665 V
+277 56 V
+278 -99 V
+278 205 V
+770 2562 M
+278 -383 V
+277 486 V
+278 -486 V
+277 0 V
+278 882 V
+278 -343 V
+277 571 V
+2991 2179 L
+277 68 V
+278 1 V
+278 -69 V
+277 262 V
+278 607 V
+277 -801 V
+278 885 V
+277 212 V
+5489 2179 L
+278 259 V
+770 2768 M
+278 -391 V
+277 234 V
+278 -432 V
+277 0 V
+278 639 V
+278 394 V
+2713 2179 L
+278 639 V
+277 -207 V
+278 436 V
+278 85 V
+277 -519 V
+278 434 V
+277 85 V
+278 -397 V
+277 312 V
+278 -776 V
+770 2555 M
+278 358 V
+277 -47 V
+278 -553 V
+277 1119 V
+278 251 V
+278 -492 V
+277 208 V
+278 -961 V
+277 -125 V
+278 -134 V
+278 13 V
+277 812 V
+278 -825 V
+277 589 V
+278 405 V
+277 -469 V
+278 -472 V
+770 3251 M
+278 -60 V
+277 243 V
+278 -183 V
+277 -27 V
+278 103 V
+278 70 V
+277 37 V
+278 -183 V
+277 -433 V
+278 616 V
+278 -521 V
+277 152 V
+278 125 V
+4656 2171 L
+278 546 V
+277 0 V
+278 -163 V
+770 2717 M
+278 0 V
+277 -403 V
+278 -192 V
+277 489 V
+278 393 V
+278 323 V
+2713 2263 L
+278 869 V
+277 -577 V
+278 577 V
+278 0 V
+277 -577 V
+278 449 V
+277 -627 V
+278 340 V
+277 -399 V
+278 42 V
+770 2438 M
+278 694 V
+277 -694 V
+278 813 V
+1880 1792 L
+278 387 V
+278 198 V
+277 -198 V
+278 868 V
+277 -609 V
+278 694 V
+278 531 V
+277 -845 V
+278 509 V
+4656 2179 L
+278 639 V
+277 558 V
+278 193 V
+770 2246 M
+278 67 V
+277 1223 V
+278 -312 V
+277 -52 V
+278 40 V
+278 -657 V
+277 -57 V
+278 829 V
+277 -29 V
+278 -47 V
+278 -813 V
+277 -125 V
+278 1223 V
+277 -307 V
+278 -56 V
+277 32 V
+278 298 V
+770 2376 M
+278 1206 V
+1325 2179 L
+278 198 V
+277 1049 V
+278 -175 V
+2436 1792 L
+277 585 V
+278 874 V
+277 285 V
+278 -454 V
+278 -705 V
+277 -130 V
+278 843 V
+277 -713 V
+278 950 V
+277 574 V
+5489 2829 L
+770 2717 M
+278 -279 V
+277 257 V
+278 556 V
+277 -547 V
+278 659 V
+278 -231 V
+2713 2109 L
+278 -1 V
+277 -378 V
+278 1360 V
+278 -911 V
+277 432 V
+278 -432 V
+277 1357 V
+278 -404 V
+277 -498 V
+278 1042 V
+770 2246 M
+278 67 V
+277 -134 V
+278 1072 V
+1880 2179 L
+278 1251 V
+278 -188 V
+2713 2179 L
+278 486 V
+277 -288 V
+278 -152 V
+278 273 V
+277 727 V
+4379 2179 L
+277 271 V
+278 766 V
+277 212 V
+278 354 V
+770 2768 M
+278 483 V
+277 76 V
+278 -227 V
+277 32 V
+278 -467 V
+278 586 V
+277 76 V
+278 -117 V
+277 359 V
+278 -397 V
+278 40 V
+277 151 V
+4379 2179 L
+277 -9 V
+278 1431 V
+5211 2438 L
+770 1609 M
+278 696 V
+277 -513 V
+278 387 V
+277 1184 V
+278 -986 V
+278 1192 V
+277 -852 V
+278 -340 V
+277 671 V
+278 -331 V
+278 -71 V
+277 1136 V
+278 -692 V
+277 -13 V
+278 -412 V
+277 586 V
+770 4025 M
+278 -774 V
+277 -820 V
+278 820 V
+277 -119 V
+278 -486 V
+278 194 V
+277 594 V
+278 -262 V
+277 -321 V
+278 -672 V
+278 736 V
+277 -736 V
+278 1072 V
+277 -39 V
+278 324 V
+277 -67 V
+770 2959 M
+278 -404 V
+277 -376 V
+278 376 V
+277 -331 V
+278 1164 V
+278 -305 V
+277 -770 V
+278 735 V
+277 386 V
+278 -823 V
+278 297 V
+277 1039 V
+4379 1973 L
+277 813 V
+278 -121 V
+277 769 V
+-4441 0 R
+278 -302 V
+277 87 V
+278 180 V
+277 -734 V
+278 871 V
+2436 2497 L
+277 -184 V
+278 -134 V
+277 -387 V
+278 1399 V
+278 -36 V
+277 -969 V
+278 515 V
+277 -494 V
+278 -415 V
+277 1417 V
+770 2818 M
+278 -101 V
+277 880 V
+278 -346 V
+277 206 V
+278 189 V
+278 -283 V
+277 -545 V
+278 592 V
+277 -159 V
+278 -247 V
+278 -339 V
+277 -227 V
+278 117 V
+277 906 V
+4934 2313 L
+277 294 V
+770 3252 M
+278 -339 V
+277 -248 V
+278 248 V
+277 -600 V
+278 505 V
+278 -705 V
+277 809 V
+278 512 V
+3268 2313 L
+278 1350 V
+3824 2184 L
+277 1015 V
+278 128 V
+277 -509 V
+278 -296 V
+277 936 V
+770 2717 M
+278 717 V
+277 -819 V
+278 784 V
+277 -222 V
+278 -930 V
+278 364 V
+277 60 V
+278 541 V
+277 -122 V
+278 -71 V
+278 232 V
+277 -79 V
+278 -124 V
+277 -869 V
+278 1148 V
+770 2866 M
+278 263 V
+277 3 V
+278 -953 V
+277 796 V
+278 -662 V
+278 701 V
+277 -576 V
+278 609 V
+277 -549 V
+278 822 V
+3824 2253 L
+277 998 V
+278 -38 V
+277 -900 V
+278 1634 V
+770 3434 M
+278 486 V
+277 -820 V
+278 369 V
+1880 2179 L
+278 1255 V
+278 459 V
+2713 2108 L
+278 22 V
+277 48 V
+278 1 V
+278 1184 V
+277 -190 V
+278 -169 V
+277 -627 V
+278 -198 V
+770 3414 M
+278 -282 V
+277 256 V
+278 18 V
+277 -155 V
+2158 2247 L
+278 -68 V
+277 486 V
+278 -347 V
+277 548 V
+278 -687 V
+278 198 V
+277 0 V
+278 263 V
+277 -485 V
+278 24 V
+770 3434 M
+278 -19 V
+1325 2179 L
+278 490 V
+277 -292 V
+278 -134 V
+278 525 V
+277 -455 V
+278 -800 V
+277 1535 V
+278 203 V
+278 -39 V
+277 -253 V
+278 123 V
+4656 1513 L
+278 1765 V
+770 2767 M
+278 522 V
+277 -242 V
+278 -877 V
+277 85 V
+278 -76 V
+278 -377 V
+277 636 V
+278 26 V
+277 570 V
+3546 1513 L
+278 1534 V
+277 204 V
+278 218 V
+277 -142 V
+278 107 V
+770 3289 M
+278 -471 V
+277 433 V
+1603 2150 L
+277 1101 V
+278 -534 V
+278 -87 V
+277 697 V
+278 176 V
+277 -685 V
+278 -110 V
+278 828 V
+277 161 V
+4379 2060 L
+277 1304 V
+278 -113 V
+770 2340 M
+278 792 V
+277 -467 V
+278 769 V
+277 -183 V
+278 -161 V
+278 -652 V
+277 -125 V
+278 1223 V
+277 33 V
+3546 2179 L
+278 486 V
+277 383 V
+278 -383 V
+277 769 V
+278 35 V
+770 2509 M
+278 -262 V
+277 885 V
+278 -635 V
+277 938 V
+278 -557 V
+278 -699 V
+277 198 V
+278 178 V
+277 -55 V
+278 789 V
+278 -588 V
+277 662 V
+278 -231 V
+277 -630 V
+770 3251 M
+278 -827 V
+277 749 V
+278 -508 V
+277 294 V
+278 -404 V
+278 -376 V
+277 1184 V
+278 -112 V
+3268 2034 L
+278 145 V
+278 0 V
+277 734 V
+278 1259 V
+277 -390 V
+770 3150 M
+278 -971 V
+277 639 V
+278 -639 V
+277 0 V
+278 812 V
+278 372 V
+277 -808 V
+278 879 V
+277 -824 V
+278 394 V
+278 178 V
+277 -50 V
+278 27 V
+277 535 V
+770 3682 M
+278 -634 V
+277 315 V
+1603 2179 L
+277 318 V
+278 -184 V
+2436 1299 L
+277 880 V
+278 1072 V
+277 -935 V
+278 816 V
+278 -784 V
+277 214 V
+278 -415 V
+277 1216 V
+770 2818 M
+278 -689 V
+277 1234 V
+1603 2179 L
+277 535 V
+278 -535 V
+278 538 V
+277 51 V
+278 -589 V
+277 68 V
+278 717 V
+278 363 V
+277 107 V
+278 -302 V
+277 231 V
+770 3410 M
+278 -278 V
+277 -483 V
+278 754 V
+277 31 V
+278 35 V
+278 -257 V
+277 39 V
+278 -911 V
+277 377 V
+278 495 V
+278 39 V
+277 0 V
+278 -39 V
+277 -253 V
+770 2247 M
+278 1183 V
+1325 2377 L
+278 -231 V
+277 1323 V
+278 0 V
+278 -836 V
+277 694 V
+278 -76 V
+277 -79 V
+278 262 V
+278 -71 V
+277 -112 V
+4379 2179 L
+277 1184 V
+770 3782 M
+1048 2438 L
+277 949 V
+1603 2179 L
+277 1072 V
+278 443 V
+2436 2179 L
+277 319 V
+278 -57 V
+277 -644 V
+278 701 V
+278 865 V
+277 269 V
+278 223 V
+770 3363 M
+1048 2179 L
+277 -475 V
+278 734 V
+277 813 V
+278 -38 V
+278 -965 V
+277 -212 V
+278 1022 V
+277 -129 V
+278 -750 V
+278 953 V
+277 302 V
+4379 1792 L
+770 2247 M
+278 -734 V
+277 808 V
+278 -8 V
+277 -66 V
+278 118 V
+278 12 V
+277 393 V
+278 510 V
+277 154 V
+278 -158 V
+278 158 V
+4101 2138 L
+278 -104 V
+770 3282 M
+1048 2179 L
+277 -145 V
+278 970 V
+1880 1704 L
+278 1865 V
+2436 2179 L
+277 318 V
+278 1 V
+277 569 V
+278 -690 V
+278 -361 V
+277 1418 V
+278 -430 V
+770 2016 M
+278 1418 V
+277 -475 V
+278 131 V
+277 -372 V
+278 533 V
+278 -151 V
+277 -435 V
+278 -289 V
+277 -129 V
+278 1137 V
+278 -920 V
+277 526 V
+278 183 V
+770 2179 M
+278 953 V
+277 437 V
+278 -206 V
+1880 2179 L
+278 0 V
+278 -71 V
+277 851 V
+278 292 V
+277 -874 V
+278 670 V
+278 204 V
+277 183 V
+4379 2034 L
+770 2246 M
+278 1005 V
+277 -813 V
+278 279 V
+277 45 V
+278 -264 V
+278 319 V
+277 -638 V
+278 1012 V
+277 193 V
+3546 2108 L
+278 940 V
+277 84 V
+278 -510 V
+770 3132 M
+278 -42 V
+277 161 V
+278 -696 V
+277 -393 V
+278 1050 V
+2436 1704 L
+277 609 V
+278 -135 V
+277 135 V
+278 64 V
+278 150 V
+277 1009 V
+4379 2179 L
+770 3003 M
+278 836 V
+1325 2247 L
+278 843 V
+277 -9 V
+278 -704 V
+278 1317 V
+277 -215 V
+278 -80 V
+277 -734 V
+278 -634 V
+278 524 V
+277 0 V
+770 3289 M
+278 -199 V
+277 -713 V
+278 0 V
+277 627 V
+278 -448 V
+278 -179 V
+277 -198 V
+278 68 V
+277 -129 V
+278 1014 V
+278 -634 V
+277 753 V
+770 2178 M
+278 954 V
+277 -128 V
+278 465 V
+1880 2179 L
+278 486 V
+278 -631 V
+277 343 V
+278 -585 V
+277 456 V
+278 307 V
+278 -376 V
+277 1148 V
+770 1792 M
+278 316 V
+277 1326 V
+278 0 V
+277 -475 V
+278 214 V
+278 -618 V
+277 213 V
+278 364 V
+277 -624 V
+278 926 V
+278 -521 V
+277 521 V
+770 2768 M
+278 631 V
+277 35 V
+278 -475 V
+277 213 V
+278 204 V
+278 -924 V
+277 982 V
+278 -183 V
+3268 1792 L
+278 1642 V
+278 0 V
+277 -222 V
+770 2107 M
+278 1261 V
+1325 1513 L
+278 2119 V
+1880 2034 L
+278 342 V
+278 1225 V
+2713 2518 L
+278 1473 V
+3268 2247 L
+278 1159 V
+278 -155 V
+277 -640 V
+770 3289 M
+278 83 V
+277 -542 V
+278 174 V
+277 395 V
+278 -788 V
+278 679 V
+277 -914 V
+278 1544 V
+277 -593 V
+278 72 V
+278 35 V
+277 432 V
+770 3426 M
+278 384 V
+277 -678 V
+278 -521 V
+277 823 V
+278 -344 V
+278 344 V
+277 -37 V
+278 37 V
+277 -475 V
+278 218 V
+278 257 V
+770 2721 M
+278 -687 V
+277 591 V
+278 -248 V
+277 -198 V
+278 21 V
+278 413 V
+277 -300 V
+278 549 V
+277 501 V
+3546 2179 L
+278 589 V
+770 3632 M
+278 -459 V
+277 -994 V
+278 1072 V
+277 0 V
+278 38 V
+278 -471 V
+277 -701 V
+278 1246 V
+277 -545 V
+278 616 V
+278 -717 V
+770 3182 M
+278 182 V
+277 138 V
+1603 2180 L
+277 1071 V
+278 443 V
+278 -562 V
+277 -572 V
+278 842 V
+277 -536 V
+278 -273 V
+278 1327 V
+770 3363 M
+278 -404 V
+277 88 V
+278 276 V
+277 111 V
+278 405 V
+278 -707 V
+277 195 V
+2991 2313 L
+277 1530 V
+3546 2438 L
+278 -170 V
+770 3434 M
+278 -302 V
+277 -364 V
+278 864 V
+277 -420 V
+278 -965 V
+278 571 V
+277 783 V
+278 -204 V
+3268 2178 L
+278 646 V
+278 -577 V
+770 3251 M
+278 -416 V
+277 599 V
+278 35 V
+1880 2179 L
+278 200 V
+278 -132 V
+277 666 V
+278 -650 V
+277 -79 V
+278 1067 V
+278 379 V
+770 2768 M
+278 666 V
+277 -810 V
+278 -13 V
+277 -432 V
+278 1037 V
+2436 2149 L
+277 793 V
+278 -174 V
+277 -422 V
+278 1683 V
+770 2555 M
+278 -376 V
+277 68 V
+278 -455 V
+277 260 V
+278 127 V
+278 68 V
+277 97 V
+278 424 V
+277 -589 V
+278 -19 V
+770 3251 M
+278 -886 V
+277 190 V
+278 -307 V
+277 1384 V
+278 -915 V
+278 977 V
+2713 2555 L
+278 0 V
+277 358 V
+278 719 V
+770 2313 M
+278 1075 V
+1325 2192 L
+278 1020 V
+277 -965 V
+278 -216 V
+278 148 V
+277 1290 V
+278 -142 V
+3268 2179 L
+278 -45 V
+770 2497 M
+278 -161 V
+277 1098 V
+278 -543 V
+277 282 V
+278 -579 V
+278 454 V
+277 421 V
+2991 2135 L
+277 955 V
+278 -911 V
+770 2554 M
+278 -375 V
+277 0 V
+278 943 V
+1880 1792 L
+278 346 V
+278 910 V
+277 84 V
+278 -799 V
+277 1170 V
+278 -413 V
+770 3327 M
+278 0 V
+277 36 V
+1603 2179 L
+277 -300 V
+278 1874 V
+278 -463 V
+277 -39 V
+278 350 V
+277 -312 V
+3546 1870 L
+770 3289 M
+278 -117 V
+277 -992 V
+278 375 V
+277 162 V
+278 287 V
+278 -91 V
+277 750 V
+2991 2555 L
+277 213 V
+278 735 V
+770 2768 M
+278 -51 V
+277 -404 V
+278 0 V
+277 745 V
+278 -879 V
+278 1135 V
+2713 2268 L
+278 864 V
+277 232 V
+770 2717 M
+278 -470 V
+277 -212 V
+278 1501 V
+277 -532 V
+2158 1958 L
+278 76 V
+277 -157 V
+278 1374 V
+277 112 V
+770 3327 M
+278 0 V
+277 15 V
+278 -383 V
+277 -346 V
+278 519 V
+278 231 V
+2713 2179 L
+278 538 V
+277 682 V
+770 2717 M
+278 -648 V
+277 978 V
+278 1 V
+277 -963 V
+278 733 V
+278 -308 V
+277 -331 V
+278 868 V
+277 -944 V
+770 2438 M
+278 813 V
+1325 2115 L
+278 1212 V
+277 -76 V
+2158 2187 L
+278 945 V
+277 -128 V
+278 359 V
+277 -151 V
+770 3251 M
+1048 2146 L
+277 1253 V
+1603 2179 L
+277 1033 V
+278 -117 V
+278 954 V
+277 -876 V
+278 -735 V
+277 117 V
+770 3434 M
+278 -207 V
+277 -789 V
+278 609 V
+277 172 V
+278 -664 V
+278 404 V
+277 -169 V
+278 -413 V
+277 810 V
+770 2107 M
+278 1220 V
+277 -38 V
+278 -77 V
+277 -165 V
+278 -906 V
+278 1215 V
+277 -604 V
+278 -559 V
+770 3172 M
+278 10 V
+1325 1515 L
+278 1551 V
+277 185 V
+278 -100 V
+278 -192 V
+277 673 V
+278 -971 V
+770 2377 M
+278 0 V
+277 1057 V
+278 -302 V
+277 267 V
+2158 2247 L
+278 -68 V
+277 1007 V
+278 9 V
+770 3172 M
+278 1 V
+277 34 V
+1603 2179 L
+277 1660 V
+2158 2614 L
+278 -59 V
+277 808 V
+278 -151 V
+770 2770 M
+278 -331 V
+277 -329 V
+278 1079 V
+277 -57 V
+278 -635 V
+278 1342 V
+2713 1801 L
+278 1371 V
+770 2247 M
+278 712 V
+277 -462 V
+278 1285 V
+277 -419 V
+2158 2179 L
+278 589 V
+277 -589 V
+278 1660 V
+770 2247 M
+278 709 V
+277 -459 V
+278 937 V
+277 -4 V
+278 -471 V
+278 228 V
+277 -632 V
+278 879 V
+770 3378 M
+278 -166 V
+277 -7 V
+278 158 V
+277 71 V
+278 102 V
+2436 2438 L
+277 744 V
+770 3363 M
+278 173 V
+277 -102 V
+278 -179 V
+277 -758 V
+278 1342 V
+2436 1896 L
+277 872 V
+770 3396 M
+1048 2181 L
+277 909 V
+278 -977 V
+277 -485 V
+278 107 V
+278 2047 V
+277 -544 V
+770 3217 M
+278 -840 V
+277 0 V
+278 823 V
+277 -823 V
+278 874 V
+278 -888 V
+277 2 V
+770 2438 M
+278 744 V
+277 -352 V
+278 533 V
+277 55 V
+278 -980 V
+278 1065 V
+277 -93 V
+770 2178 M
+278 1073 V
+1325 1418 L
+278 839 V
+277 702 V
+278 577 V
+278 -871 V
+277 586 V
+770 3131 M
+278 213 V
+277 -908 V
+278 175 V
+277 -264 V
+278 700 V
+278 522 V
+277 -206 V
+770 2325 M
+278 765 V
+277 83 V
+278 -676 V
+277 1039 V
+278 -446 V
+278 511 V
+770 3327 M
+278 84 V
+277 -160 V
+278 -43 V
+277 -243 V
+278 -354 V
+278 679 V
+770 2034 M
+278 145 V
+277 1072 V
+278 -60 V
+277 197 V
+2158 2179 L
+278 766 V
+770 3024 M
+278 -359 V
+277 103 V
+278 956 V
+1880 2179 L
+278 1072 V
+278 -69 V
+770 2768 M
+278 -103 V
+277 130 V
+278 -130 V
+277 586 V
+278 -586 V
+278 586 V
+770 3212 M
+278 35 V
+277 -636 V
+278 0 V
+277 609 V
+278 13 V
+278 130 V
+770 2664 M
+278 -351 V
+277 1256 V
+1603 2179 L
+277 134 V
+278 797 V
+278 -445 V
+770 3782 M
+1048 2313 L
+277 1223 V
+1603 2179 L
+277 639 V
+278 376 V
+278 169 V
+770 1619 M
+278 1429 V
+277 -539 V
+278 11 V
+277 -289 V
+278 1020 V
+770 2115 M
+278 540 V
+277 -476 V
+278 238 V
+277 -555 V
+278 1460 V
+770 2497 M
+278 937 V
+1325 2247 L
+278 1299 V
+277 -142 V
+278 -153 V
+770 2179 M
+278 1298 V
+1325 1957 L
+278 1276 V
+277 -143 V
+278 -713 V
+770 3251 M
+278 -526 V
+277 -546 V
+278 68 V
+277 757 V
+278 -186 V
+770 2610 M
+278 -297 V
+277 777 V
+278 161 V
+277 -874 V
+278 1126 V
+770 3363 M
+1048 2121 L
+277 126 V
+278 260 V
+277 311 V
+278 -639 V
+770 3251 M
+1048 1813 L
+277 459 V
+278 158 V
+277 -151 V
+770 2324 M
+278 724 V
+277 -13 V
+278 -31 V
+277 -186 V
+770 2611 M
+278 521 V
+1325 2069 L
+278 699 V
+277 414 V
+770 2959 M
+278 292 V
+1325 2179 L
+278 -385 V
+277 1165 V
+770 2219 M
+278 785 V
+277 -664 V
+278 920 V
+277 -170 V
+770 2127 M
+278 918 V
+277 50 V
+278 77 V
+277 -448 V
+770 3363 M
+278 -646 V
+277 -538 V
+278 376 V
+277 944 V
+770 2717 M
+278 -219 V
+277 -312 V
+278 531 V
+770 1876 M
+278 1214 V
+277 -274 V
+278 -151 V
+770 2162 M
+278 1620 V
+277 -369 V
+278 -695 V
+770 2179 M
+278 1255 V
+277 -879 V
+278 27 V
+770 3251 M
+278 -79 V
+277 -404 V
+278 -66 V
+770 3326 M
+278 -508 V
+277 471 V
+1603 2153 L
+770 3349 M
+278 -684 V
+277 -79 V
+278 -254 V
+770 2665 M
+278 838 V
+277 -104 V
+278 -440 V
+770 3314 M
+278 -266 V
+277 -868 V
+770 2376 M
+278 1839 V
+1325 3206 L
+770 2665 M
+278 770 V
+277 -387 V
+770 2438 M
+278 -123 V
+277 1188 V
+770 2320 M
+278 1057 V
+277 57 V
+-555 0 R
+278 460 V
+277 -642 V
+-555 -1 R
+278 -199 V
+277 417 V
+770 3434 M
+278 1 V
+770 3047 M
+278 316 V
+-278 71 R
+278 -48 V
+-278 48 R
+278 432 V
+770 2315 M
+278 1171 V
+770 2556 M
+278 565 V
+770 2337 M
+278 904 V
+770 2231 M
+0 1093 R
+0 -996 R
+0 923 R
+0 252 R
+0 -214 R
+0 -157 R
+% End plot #1
+stroke
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+770 4619 N
+770 448 L
+6107 0 V
+0 4171 V
+-6107 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+3823 4829 M
+[ [(Helvetica) 140.0 0.0 true true 0 (Graph 1 \(lab5)]
+[(Helvetica) 112.0 -42.0 true true 0 (r)]
+[(Helvetica) 140.0 0.0 true true 0 (esults/Run.012/FLOPS.004/MPI.0024/OpenMP.0001\))]
+] -32.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+LTb
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica
+%%Pages: 1

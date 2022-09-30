@@ -9,3 +9,7 @@
 
 # slurm outputs
 *.out
+
+# ignore the experiment results
+dir_to_ignore/Empirical_Roofline_Tool-1.1.0/lab5_results/
+dir_to_ignore/Empirical_Roofline_Tool-1.1.0/Results.madonna.lbl.gov.01/

@@ -1,0 +1,19 @@
+    25.51 FP64 GFLOPs
+
+  1206.68 Weight
+
+   101.80 L1
+    66.82 L2
+    36.12 DRAM
+
+META_DATA
+  MPI startup(): shm:tmi fabric is unknown or has been removed from the product, please use ofi or shm:ofi instead
+  FLOPS          4
+  MPI_PROCS      2
+  OPENMP_THREADS 1
+  ERT_VERSION  1.1.0
+  HOSTNAME  ('shas0420.rc.int.colorado.edu', [], ['10.225.6.135'])
+  UNAME  uname_result(system='Linux', node='shas0420.rc.int.colorado.edu', release='3.10.0-957.27.2.el7.x86_64', version='#1 SMP Mon Jul 29 17:46:05 UTC 2019', machine='x86_64', processor='x86_64')
+  TIMESTAMP_DATA  1664552850.2920976
+  CONFIG  {'ERT_RESULTS': ['lab5_results'], 'ERT_DRIVER': ['driver1'], 'ERT_KERNEL': ['kernel1'], 'ERT_MPI': ['True'], 'ERT_MPI_CFLAGS': ['-I/usr/include/mpi'], 'ERT_MPI_LDFLAGS': ['-lmpi'], 'ERT_OPENMP': ['True'], 'ERT_OPENMP_CFLAGS': ['-qopenmp'], 'ERT_OPENMP_LDFLAGS': ['-qopenmp'], 'ERT_FLOPS': ['1,2,4,8,16'], 'ERT_ALIGN': ['32'], 'ERT_CC': ['mpicc'], 'ERT_CFLAGS': ['-O3', '-msse3', '-axSSE3', '-xSSE3', '-fno-alias', '-fno-fnalias', '-DERT_INTEL', '-std=c++11'], 'ERT_LD': ['mpicc'], 'ERT_LDFLAGS': [], 'ERT_LDLIBS': [], 'ERT_PRECISION': ['FP64'], 'ERT_RUN': ['export', 'OMP_NUM_THREADS=ERT_OPENMP_THREADS;', 'mpirun', '-np', 'ERT_MPI_PROCS', 'ERT_CODE'], 'ERT_PROCS_THREADS': ['1-24'], 'ERT_MPI_PROCS': ['1,2,4'], 'ERT_OPENMP_THREADS': ['1,2,4'], 'ERT_NUM_EXPERIMENTS': ['1'], 'ERT_MEMORY_MAX': ['1073741824'], 'ERT_WORKING_SET_MIN': ['1'], 'ERT_TRIALS_MIN': ['1'], 'ERT_GNUPLOT': ['gnuplot'], 'ERT_GPU': [False], 'ERT_HIP': [False], 'ERT_OCL': [False], 'ERT_SYCL': [False], 'ERT_WSS_MULT': [1.1]}
+   
